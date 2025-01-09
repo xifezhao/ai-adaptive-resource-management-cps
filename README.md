@@ -48,7 +48,7 @@ pip install -r requirements.txt
 To run the simulation, execute the main Python script:
 
 ```bash
-IntelligentResourceManager_EN.py  # Replace your_script_name.py with the actual filename (likely the name you saved the provided code as)
+IntelligentResourceManager_EN.py  # 
 IntelligentResourceManager_CN.py  # 中文注释，对国人友好的注解版本
 ```
 
