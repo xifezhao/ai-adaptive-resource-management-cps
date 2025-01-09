@@ -1,4 +1,4 @@
-```markdown
+
 # Adaptive Resource Management System
 
 This repository contains a Python implementation of an adaptive resource management system. The system utilizes various demand prediction techniques and resource allocation strategies, including traditional methods and reinforcement learning approaches, to dynamically manage resources based on predicted demand.
@@ -103,4 +103,3 @@ Contributions to this project are welcome! If you have suggestions for improveme
 ## License
 
 This project is licensed under the [Specify your license here, e.g., MIT License]. See the `LICENSE` file for more details.
-```
