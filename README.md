@@ -103,4 +103,4 @@ Contributions to this project are welcome! If you have suggestions for improveme
 
 ## License
 
-This project is licensed under the [Specify your license here, e.g., MIT License]. See the `LICENSE` file for more details.
+This project is licensed under the  MIT License.
