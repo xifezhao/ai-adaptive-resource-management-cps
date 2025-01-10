@@ -74,14 +74,85 @@ The script initializes and compares the following resource management approaches
     *   Random Forest Predictor + Rule-Based Allocator
     *   Linear Regression Predictor + Q-Learning Allocator
 
-## Results
+## Experiment Data Description
 
-The script outputs two CSV files containing the experimental results:
+This repository contains the results of resource management experiments stored in two CSV files:
 
-*   **`experiment_episodes.csv`:** Contains the performance metrics for each episode (or every 10 episodes). This includes the average reward achieved by each method over the last 10 episodes.
-*   **`experiment_overall.csv`:** Contains the overall performance statistics for each method across all runs, including the mean and standard deviation of the rewards.
+1. `experiment_episodes.csv`  
+2. `experiment_overall.csv`  
 
-Additionally, the script generates a plot (for the last run) comparing the average rewards of different methods over the episodes.
+Below is a detailed explanation of the purpose and structure of each file.
+
+---
+
+### 1. `experiment_episodes.csv`
+
+#### Purpose  
+This file contains detailed data for each experiment episode. It tracks the performance of different resource management methods over time, making it useful for dynamic performance analysis.
+
+#### Structure  
+The file includes the following columns:
+
+| Column                        | Description                                                                                     |
+|-------------------------------|-------------------------------------------------------------------------------------------------|
+| `Run ID`                      | The identifier for the experiment run (e.g., `1`, `2`, etc.).                                   |
+| `Episode`                     | The episode number within the experiment run.                                                  |
+| `Fixed Reward`                | Average reward obtained using the Fixed Allocation method during the episode.                  |
+| `Threshold Reward`            | Average reward obtained using the Threshold Allocation method during the episode.              |
+| `Adaptive (LSTM + QL) Reward` | Average reward for the adaptive method combining LSTM predictor and Q-Learning allocator.      |
+| `Adaptive (ARIMA + SARSA) Reward` | Average reward for the adaptive method combining ARIMA predictor and SARSA allocator.       |
+| `Adaptive (Transformer + PG) Reward` | Average reward for the adaptive method combining Transformer predictor and Policy Gradient allocator. |
+| `Adaptive (RF + Rule) Reward` | Average reward for the adaptive method combining Random Forest predictor and Rule-Based allocator. |
+| `Adaptive (LR + QL) Reward`   | Average reward for the adaptive method combining Linear Regression predictor and Q-Learning allocator. |
+
+#### Example Data  
+
+| Run ID | Episode | Fixed Reward | Threshold Reward | Adaptive (LSTM + QL) Reward | Adaptive (ARIMA + SARSA) Reward | Adaptive (Transformer + PG) Reward | Adaptive (RF + Rule) Reward | Adaptive (LR + QL) Reward |
+|--------|---------|--------------|-------------------|-----------------------------|----------------------------------|--------------------------------------|-----------------------------|----------------------------|
+| 1      | 0       | 0.50         | 0.45              | 0.62                        | 0.58                             | 0.63                                 | 0.55                        | 0.60                       |
+| 1      | 10      | 0.52         | 0.48              | 0.65                        | 0.61                             | 0.68                                 | 0.57                        | 0.64                       |
+
+---
+
+### 2. `experiment_overall.csv`
+
+#### Purpose  
+This file summarizes the overall performance of different resource management methods for each experiment run. It provides statistical metrics such as the mean and standard deviation of the rewards.
+
+#### Structure  
+The file includes the following columns:
+
+| Column                            | Description                                                                                     |
+|-----------------------------------|-------------------------------------------------------------------------------------------------|
+| `Run ID`                          | The identifier for the experiment run (e.g., `1`, `2`, etc.).                                   |
+| `Fixed Mean`                      | Mean reward across all episodes using the Fixed Allocation method.                              |
+| `Fixed Std`                       | Standard deviation of rewards using the Fixed Allocation method.                                |
+| `Threshold Mean`                  | Mean reward across all episodes using the Threshold Allocation method.                          |
+| `Threshold Std`                   | Standard deviation of rewards using the Threshold Allocation method.                            |
+| `Adaptive (LSTM + QL) Mean`       | Mean reward for the adaptive method combining LSTM predictor and Q-Learning allocator.          |
+| `Adaptive (LSTM + QL) Std`        | Standard deviation of rewards for the adaptive method combining LSTM predictor and Q-Learning allocator. |
+| `Adaptive (ARIMA + SARSA) Mean`   | Mean reward for the adaptive method combining ARIMA predictor and SARSA allocator.              |
+| `Adaptive (ARIMA + SARSA) Std`    | Standard deviation of rewards for the adaptive method combining ARIMA predictor and SARSA allocator. |
+| `Adaptive (Transformer + PG) Mean` | Mean reward for the adaptive method combining Transformer predictor and Policy Gradient allocator. |
+| `Adaptive (Transformer + PG) Std` | Standard deviation of rewards for the adaptive method combining Transformer predictor and Policy Gradient allocator. |
+| `Adaptive (RF + Rule) Mean`       | Mean reward for the adaptive method combining Random Forest predictor and Rule-Based allocator.  |
+| `Adaptive (RF + Rule) Std`        | Standard deviation of rewards for the adaptive method combining Random Forest predictor and Rule-Based allocator. |
+| `Adaptive (LR + QL) Mean`         | Mean reward for the adaptive method combining Linear Regression predictor and Q-Learning allocator. |
+| `Adaptive (LR + QL) Std`          | Standard deviation of rewards for the adaptive method combining Linear Regression predictor and Q-Learning allocator. |
+
+#### Example Data  
+
+| Run ID | Fixed Mean | Fixed Std | Threshold Mean | Threshold Std | Adaptive (LSTM + QL) Mean | Adaptive (LSTM + QL) Std | Adaptive (ARIMA + SARSA) Mean | Adaptive (ARIMA + SARSA) Std | ... |
+|--------|------------|-----------|----------------|---------------|---------------------------|--------------------------|-------------------------------|--------------------------------|-----|
+| 1      | 0.52       | 0.03      | 0.49           | 0.02          | 0.63                      | 0.05                     | 0.60                          | 0.04                           | ... |
+
+---
+
+### Usage  
+
+- **Dynamic Analysis**: Use `experiment_episodes.csv` to visualize how the rewards change over episodes for each method. For example, plot reward curves to assess the convergence and stability of each method.  
+- **Summary Comparison**: Use `experiment_overall.csv` to compare the overall performance (mean and variability) of different resource management methods across runs.  
+
 
 ## Code Structure
 
