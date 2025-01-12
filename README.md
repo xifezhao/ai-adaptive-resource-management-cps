@@ -168,6 +168,8 @@ The code is organized into several classes, each responsible for a specific part
 *   **`run_experiment`:**  Sets up and runs a single experimental run.
 *   **`main`:**  Executes multiple experimental runs and saves the results.
 
+![average_rewards_per_run.pdf](Average rewards per run)
+
 ## Contributing
 
 Contributions to this project are welcome! If you have suggestions for improvements, new prediction or allocation algorithms, or bug fixes, please feel free to open an issue or submit a pull request.
