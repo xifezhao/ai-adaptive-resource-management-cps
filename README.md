@@ -168,7 +168,7 @@ The code is organized into several classes, each responsible for a specific part
 *   **`run_experiment`:**  Sets up and runs a single experimental run.
 *   **`main`:**  Executes multiple experimental runs and saves the results.
 
-![average_rewards_per_run.pdf](Average rewards per run)
+![Average rewards per run](average_rewards_per_run.pdf)
 
 ## Contributing
 
