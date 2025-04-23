@@ -202,7 +202,7 @@ The code is organized into several classes:
 
 **Generated Plots:**
 
-![Average rewards comparison](rewards_comparison_plot_seed_42_reward_mod_v3.png)
+![Average rewards comparison](reward_comparison_line_plots.png)
 
 ![Federated Learning Loss](fl_training_loss.png)
 
