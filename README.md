@@ -206,6 +206,8 @@ The code is organized into several classes:
 
 ![Federated Learning Loss](fl_training_loss.png)
 
+![Federated Learning Loss](reward_comparison_stacked_plot.pdf)
+
 ## Contributing
 
 Contributions to this project are welcome! If you have suggestions for improvements, new prediction or allocation algorithms, or bug fixes, please feel free to open an issue or submit a pull request.
