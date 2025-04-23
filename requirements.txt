@@ -1,0 +1,14 @@
+# Core libraries for numerical operations and data structures
+numpy
+
+# PyTorch for neural networks (LSTM, Transformer, RL networks)
+torch
+
+# Plotting library
+matplotlib
+
+# For ARIMA model and warnings
+statsmodels
+
+# For Random Forest and Linear Regression predictors
+scikit-learn
